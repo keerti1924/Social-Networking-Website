@@ -61,6 +61,36 @@
     opacity: 1;
 }
 
+/*** HR Line ***/
+
+.hr-lines {
+    position: relative;
+    max-width: 500px;
+    text-align: center;
+}
+
+.hr-lines:before {
+    content: " ";
+    height: 1px;
+    width: 200px;
+    background: #ddd;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+}
+
+.hr-lines:after {
+    content: " ";
+    height: 1px;
+    width: 200px;
+    background: #ddd;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}
+
 
 /*** Heading ***/
 h1,
@@ -270,10 +300,11 @@ h6,
     width: 3rem;
     height: 3rem;
 }
+
 /*** SKill Section ***/
 
-.skill img{
-    width: 500px; 
+.skill img {
+    width: 500px;
     height: 400px;
 }
 
