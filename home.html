@@ -31,7 +31,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body style="background-color: #f1f1f1;">
     <!-- Spinner Start -->
     <div id="spinner"
         class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -40,12 +40,15 @@
     <!-- Spinner End -->
 
     <!-- Navbar Start -->
-    <div class="container-fluid position-relative p-0 mt-2 d-none d-sm-none d-lg-block">
-        <nav class="navbar navbar-expand-lg navbar-light px-5 py-3 py-lg-0">
+    <!-- Large Screen  -->
+    <div class="container-fluid position-relative p-0 d-none d-sm-none d-lg-block">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-5 py-2">
             <a href="home.html" class="navbar-brand p-0">
                 <h2 class="m-0">JobHive</h2>
             </a>
-
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="d-flex justify-content-between w-100">
                     <div class="navbar-nav mx-auto py-0">
@@ -56,30 +59,37 @@
                             <i class="fa fa-users"></i>
                         </a>
                         <a href="jobs.html" class="nav-item nav-link" title="Jobs">
-                            <i class="fa fa-suitcase"></i>
+                            <i class="fa fa-briefcase"></i>
                         </a>
                         <a href="message.html" class="nav-item nav-link" title="Messaging">
                             <i class="fa fa-comment-dots"></i>
                         </a>
-                        <a href="message.html" class="nav-item nav-link" title="Notifications">
+                        <a href="notification.html" class="nav-item nav-link" title="Notifications">
                             <i class="fa fa-bell"></i>
                         </a>
-                       
+                        <a href="learning.html" class="nav-item nav-link" title="Learning">
+                            <i class="fas fa-graduation-cap"></i>
+                        </a>
+
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                                <img src="img/testimonial-1.jpg" alt="" class="img-fluid rounded-circle" width="28px">
+                                <img src="img/testimonial-4.jpg" alt="" class="img-fluid rounded-circle" width="28px">
                             </a>
-                            <div class="dropdown-menu m-0 border-0 p-2">
+                            <div class="dropdown-menu m-0 border-0 p-2 shadow">
                                 <div class="row align-items-center">
                                     <div class="col-3">
-                                        <img src="img/testimonial-1.jpg" alt="" class="img-fluid rounded-circle" width="60px">
+                                        <img src="img/testimonial-1.jpg" alt="" class="img-fluid rounded-circle"
+                                            width="60px">
                                     </div>
                                     <div class="col-7">
                                         <h6 class="text-dark"><b>Keerti Vishwkarma</b></h6>
-                                        <small class="text-secondary-subtle mt-0" style="font-size: 14px;">Java Full Stack Developer Intern @ IBM | MCA</small>
+                                        <small class="text-secondary-subtle mt-0" style="font-size: 14px;">Java Full
+                                            Stack Developer Intern @ IBM | MCA</small>
                                     </div>
                                 </div>
-                                <a href="profile.html" class="btn border border-danger text-danger p-1 my-1 w-100 text-center rounded-pill" style="font-size: 14px;">View Profile</a>
+                                <a href="profile.html"
+                                    class="btn border border-danger text-danger p-1 my-1 w-100 text-center rounded-pill"
+                                    style="font-size: 14px;">View Profile</a>
 
                                 <hr>
                                 <div class="section-1">
@@ -96,187 +106,451 @@
                     </div>
                 </div>
                 <div class="d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="search" class="form-control bg-transparent text-dark"
-                            placeholder="Search">
-                            <button class="btn btn-danger px-2"><i class="bi bi-search"></i></button>
+                    <div class="input-group">
+                        <input type="search" class="form-control bg-transparent text-dark" placeholder="Search">
+                        <button class="btn btn-danger px-2"><i class="bi bi-search text-white"></i></button>
                     </div>
                 </div>
             </div>
 
         </nav>
     </div>
-    <!-- Navbar End -->
-
-    <!-- Navbar Start -->
-    <div class="container-fluid p-0 mt-2 d-block d-lg-none">
-        <nav class="navbar navbar-expand-sm navbar-light custom px-5 py-2">
+    <!-- Small Screen  -->
+    <div class="container-fluid p-0 d-lg-none d-sm-block">
+        <div class="navbar-light bg-white py-2 px-2 d-flex justify-content-between align-items-center">
             <a href="home.html" class="navbar-brand p-0">
-                <h2 class="m-0"><i class="fa fa-home"></i></h2>
+                <h2 class="m-0">JobHive</h2>
             </a>
+            <div class="py-0">
+                <a href="home.html" class="nav-item active" title="Home">
+                    <i class="fa fa-home"></i>
+                </a>
+                <a href="networks.html" class="" title="My Network">
+                    <i class="fa fa-users"></i>
+                </a>
+                <a href="jobs.html" class="" title="Jobs">
+                    <i class="fa fa-briefcase"></i>
+                </a>
+                <a href="message.html" class="" title="Messaging">
+                    <i class="fa fa-comment-dots"></i>
+                </a>
+                <a href="notification.html" class="" title="Notifications">
+                    <i class="fa fa-bell"></i>
+                </a>
+                <a href="learning.html" class="" title="Learning">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
 
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav py-0">
-                    <!-- Search Section -->
-                    <button type="button" class="btn text-danger" data-bs-toggle="modal" data-bs-target="#searchModal">
-                        <i class="fa fa-search"></i>
-                    </button>
-                    <a href="home.html" class="nav-item nav-link active" title="Home">
-                        <i class="fa fa-home"></i>
-                    </a>
-                    <a href="networks.html" class="nav-item nav-link" title="My Network">
-                        <i class="fa fa-users"></i>
-                    </a>
-                    <a href="jobs.html" class="nav-item nav-link" title="Jobs">
-                        <i class="fa fa-suitcase"></i>
-                    </a>
-                    <a href="message.html" class="nav-item nav-link" title="Messaging">
-                        <i class="fa fa-comment-dots"></i>
-                    </a>
-                    <a href="notifications.html" class="nav-item nav-link icon-badge" title="Notifications">
-                        <i class="fa fa-bell"></i>
-                    </a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img src="img/testimonial-1.jpg" alt="" class="img-fluid rounded-circle" width="28px">
-                        </a>
-                        <div class="dropdown-menu m-0 border-0 p-2">
-                            <div class="row align-items-center">
-                                <div class="col-3">
-                                    <img src="img/testimonial-1.jpg" alt="" class="img-fluid rounded-circle" width="60px">
-                                </div>
-                                <div class="col-7">
-                                    <h6 class="text-dark"><b>Keerti Vishwkarma</b></h6>
-                                    <small class="text-secondary-subtle mt-0" style="font-size: 14px;">Java Full Stack Developer Intern @ IBM | MCA</small>
-                                </div>
-                            </div>
-                            <a href="profile.html" class="btn border border-danger text-danger p-1 my-1 w-100 text-center rounded-pill" style="font-size: 14px;">View Profile</a>
-                            <hr>
-                            <div class="section-1">
-                                <h6 class="fw-bold ms-3">Account</h6>
-                                <a href="price.html" class="dropdown-item">Settings & Privacy</a>
-                                <a href="feature.html" class="dropdown-item">Help</a>
-                                <a href="feature.html" class="dropdown-item">Languages</a>
-                                <a href="feature.html" class="dropdown-item">Posts & Activity</a>
-                                <hr>
-                                <a href="feature.html" class="dropdown-item">Sign Out</a>
-                            </div>
+
+            </div>
+            <div class="dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                    <img src="img/testimonial-4.jpg" alt="" class="img-fluid rounded-circle" width="28px">
+                </a>
+                <div class="dropdown-menu m-0 border-0 p-2 shadow">
+                    <div class="row align-items-center p-2">
+                        <div class="col-3">
+                            <img src="img/testimonial-1.jpg" alt="" class="img-fluid rounded-circle" width="60px">
+                        </div>
+                        <div class="col-7">
+                            <h6 class="text-dark"><b>Keerti Vishwkarma</b></h6>
+                            <small class="text-secondary-subtle mt-0" style="font-size: 14px;">Java Full
+                                Stack Developer Intern @ IBM | MCA</small>
                         </div>
                     </div>
-                </div>
-            </div>
+                    <a href="profile.html"
+                        class="btn border border-danger text-danger p-1 my-1 text-center rounded-pill w-100"
+                        style="font-size: 14px;">View Profile</a>
 
-        </nav>
-    </div>
-    <!-- Navbar End -->
-
-
-    <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal"
-                        aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-danger p-3 text-white"
-                            placeholder="Type search keyword">
-                        <button class="btn btn-danger px-4"><i class="bi bi-search"></i></button>
+                    <hr>
+                    <div class="section-1">
+                        <h6 class="fw-bold ms-3">Account</h6>
+                        <a href="price.html" class="dropdown-item">Settings & Privacy</a>
+                        <a href="feature.html" class="dropdown-item">Help</a>
+                        <a href="feature.html" class="dropdown-item">Languages</a>
+                        <a href="feature.html" class="dropdown-item">Posts & Activity</a>
+                        <hr>
+                        <a href="feature.html" class="dropdown-item">Sign Out</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- Full Screen Search End -->
 
+    </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Main Section Start  -->
+
+    <div class="container-fluid wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container py-2 py-lg-4">
+            <div class="row g-2">
+
+                <!-- Sidebar Start -->
+                <div class="col-lg-3">
+                    <!-- Search Form Start -->
+                    <div class="row mb-2 wow slideInUp d-lg-none" data-wow-delay="0.1s">
+                        <div class="input-group">
+                            <input type="text" class="form-control p-3" placeholder="Search....">
+                            <button class="btn btn-danger px-3"><i class="bi bi-search"></i></button>
+                        </div>
+                    </div>
+                    <!-- Search Form End -->
+
+                    <!-- Profile Start -->
+                    <div class="mb-5 wow slideInUp" data-wow-delay="0.1s">
+                        <!-- Profile Card Start -->
+                        <div class="wow slideInUp" data-wow-delay="0.1s">
+                            <div class="profile-card bg-white shadow text-center" style=" border-radius: 10px;">
+                                <div class="profile-card-header">
+                                    <img src="img/testimonial-4.jpg" alt="Profile Picture">
+                                </div>
+                                <div class="profile-card-body mt-4 p-4">
+                                    <h5><a href="profile.html" class="text-dark">Keerti Vishwkarma</a></h5>
+                                    <small>Java Full Stack Developer Intern @ IBM | MCA</small>
+                                </div>
+                                <hr>
+                                <div class="links">
+                                    <a href="profile.html" class="profile-stats text-secondary-subtle px-4">
+                                        <p>Profile viewers</p>
+                                        <span>325</span>
+                                    </a>
+                                    <a href="profile.html" class="profile-stats text-secondary-subtle px-4">
+                                        <p>Post impressions</p>
+                                        <span>80</span>
+                                    </a>
+                                </div>
+                                <hr>
+                                <div class="profile-links">
+                                    <a href="#" class="px-4"><i class="fa fas fa-save"></i> Saved items</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Profile Card End -->
+                    </div>
+                    <!-- Profile End -->
+
+
+                    <!-- Plain Text Start -->
+                    <div class="wow slideInUp" data-wow-delay="0.1s">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h3 class="mb-0">Plain Text</h3>
+                        </div>
+                        <div class="bg-light text-center" style="padding: 30px;">
+                            <p>Vero sea et accusam justo dolor accusam lorem consetetur, dolores sit amet sit dolor
+                                clita kasd justo, diam accusam no sea ut tempor magna takimata, amet sit et diam dolor
+                                ipsum amet diam</p>
+                            <a href="" class="btn btn-primary py-2 px-4">Read More</a>
+                        </div>
+                    </div>
+                    <!-- Plain Text End -->
+                </div>
+                <!-- Sidebar End -->
+
+                <div class="col-lg-6">
+                    <!-- Post Section Start -->
+
+                    <div class="row py-2 p-lg-2 mx-lg-1 wow slideInUp shadow bg-white mb-3" data-wow-delay="0.1s"
+                        style="border-radius: 10px;">
+
+                        <div class="col-md-12">
+                            <div class="create-post d-flex justify-content-between p-lg-4 p-2">
+
+                                <img src="img/testimonial-4.jpg" alt="profile-image" class="img-fluid rounded-circle"
+                                    width="65px">
+
+                                <!-- Button trigger create post modal -->
+                                <input type="button"
+                                    class="btn rounded-pill text-secondary-subtle ms-2 ms-lg-4 ps-lg-5 ps-4 text-start bg-transparent border border-secondary-subtle w-100"
+                                    data-bs-toggle="modal" data-bs-target="#createpost" value="Create a Post">
+
+                                <!-- Create Post Modal -->
+                                <div class="modal fade" id="createpost" tabindex="-1" aria-labelledby="postModalLabel"
+                                    aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <div class="header d-flex justify-content-between">
+                                                    <img src="img/testimonial-4.jpg" alt="profile-image" width="50px"
+                                                        class="img-fluid rounded-circle me-3">
+                                                    <div class="heading">
+                                                        <h1 class="modal-title fs-5" id="postModalLabel">Keerti
+                                                            Vishwkarma
+                                                        </h1>
+                                                        <small>Post to Anyone</small>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <textarea name="description" id="description"
+                                                    placeholder="Share your thoughts..." class="form-control border-0"
+                                                    rows="10" cols="10"></textarea>
+
+                                                <div class="icons text-end mt-2">
+                                                    <input type="file" id="file-input" class="file-input d-none"
+                                                        name="media">
+                                                    <label for="file-input" class="file-label">
+                                                        <i class="far fa-image"></i>
+                                                    </label>
+
+                                                    <input type="file" id="file-input1" class="file-input d-none"
+                                                        name="media" title="Add a Document">
+                                                    <label for="file-input1" class="file-label">
+                                                        <i class="far fa-newspaper"></i>
+                                                    </label>
+                                                </div>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button"
+                                                    class="btn btn-danger rounded-pill px-4">Post</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 text-end mb-2">
+                            <!-- Media Button trigger modal -->
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#mediaModal"
+                                title="Add Media">
+                                <img src="img/media.png" alt="Media" class="img-fluid" width="30px">
+                            </button>
+
+                            <!-- Article Button trigger modal -->
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                title="Add Article">
+                                <a href="article.html">
+                                    <img src="img/article.png" alt="Article" class="img-fluid" width="25px">
+                                </a>
+                            </button>
+
+                            <!-- Event Button trigger modal -->
+                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eventModal"
+                                title="Add Event">
+                                <img src="img/event.png" alt="Event" class="img-fluid" width="30px">
+                            </button>
+
+                            <!-- Media Modal -->
+                            <div class="modal fade" id="mediaModal" tabindex="-1" aria-labelledby="mediaModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-4" id="mediaModalLabel">Editor</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div
+                                            class="modal-body bg-light d-flex align-items-center justify-content-center">
+                                            <div class="p-5 text-center">
+                                                <h4>Select files to begin</h4>
+                                                <p>Share images or a single video in your post.</p>
+                                                <label class="btn btn-danger btn-file">
+                                                    Upload Image <input type="file" class="custom-file-input">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger px-4 rounded-pill">Next</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event Modal -->
+                            <div class="modal fade" id="eventModal" tabindex="-1" aria-labelledby="eventModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="eventModalLabel">Create an Event</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body text-start">
+                                            <div class="container mt-2">
+                                                <form>
+                                                    <div class="form-group mt-3 text-center">
+                                                        <label class="btn btn-danger btn-file w-100">
+                                                            Upload Image <input type="file" class="custom-file-input"
+                                                                id="eventImage">
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-group mt-3">
+                                                        <input type="text" class="form-control" id="eventName"
+                                                            placeholder="Event name" required>
+                                                    </div>
+                                                    <div class="form-group mt-3">
+                                                        <input type="date" class="form-control" id="eventDate" required>
+                                                    </div>
+                                                    <div class="form-group mt-3">
+                                                        <textarea class="form-control" id="eventDescription" rows="3"
+                                                            placeholder="Event description" required></textarea>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-danger px-4 rounded-pill">Create
+                                                Event</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="row p-lg-2 mx-lg-1 wow slideInUp shadow bg-white mb-3" data-wow-delay="0.1s"
+                        style="border-radius: 10px;">
+
+                        <div class="post-card">
+                            <div class="post-header">
+                                <img src="img/testimonial-4.jpg" alt="Profile Picture" class="profile-img">
+                                <div class="user-info">
+                                    <h5 class="m-0">Nitesh Kushwaha <span class="text-muted">(He/Him) • 1st</span>
+                                    </h5>
+                                    <small class="text-muted m-0">B-TECH (CSE) || Frontend Developer || React js ||
+                                        Tailwind Css...</small>
+                                    <small class="text-muted">58m</small>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <p>🚀 Day 4 🚀<br>
+                                    Today, I focused on mastering Loops 📄 as part of Day 4 of the 30 Days of
+                                    JavaScript Challenge! 🎉 Explored nested loops to print stars in a triangle...
+                                </p>
+                            </div>
+                            <div class="post-image">
+                                <img src="img/about.jpg" alt="Code Image 1">
+                            </div>
+                            <div class="post-actions">
+                                <button><i class="fas fa-thumbs-up"></i> Like</button>
+                                <button><i class="fas fa-comment"></i> Comment</button>
+                                <button><i class="fas fa-share"></i> Repost</button>
+                                <button><i class="fas fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row p-lg-2 mx-lg-1 wow slideInUp shadow bg-white mb-3" data-wow-delay="0.1s"
+                        style="border-radius: 10px;">
+
+                        <div class="post-card">
+                            <div class="post-header">
+                                <img src="img/testimonial-4.jpg" alt="Profile Picture" class="profile-img">
+                                <div class="user-info">
+                                    <h5 class="m-0">Nitesh Kushwaha <span class="text-muted">(He/Him) • 1st</span>
+                                    </h5>
+                                    <small class="text-muted m-0">B-TECH (CSE) || Frontend Developer || React js ||
+                                        Tailwind Css...</small>
+                                    <small class="text-muted">58m</small>
+                                </div>
+                            </div>
+                            <div class="post-content">
+                                <p>🚀 Day 4 🚀<br>
+                                    Today, I focused on mastering Loops 📄 as part of Day 4 of the 30 Days of
+                                    JavaScript Challenge! 🎉 Explored nested loops to print stars in a triangle...
+                                </p>
+                            </div>
+                            <div class="post-image">
+                                <img src="img/about.jpg" alt="Code Image 1">
+                            </div>
+                            <div class="post-actions">
+                                <button><i class="fas fa-thumbs-up"></i> Like</button>
+                                <button><i class="fas fa-comment"></i> Comment</button>
+                                <button><i class="fas fa-share"></i> Repost</button>
+                                <button><i class="fas fa-paper-plane"></i> Send</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Post Section End -->
+                </div>
+
+                  <!-- Sidebar Right Start -->
+                <div class="col-lg-3">
+                    <!-- Suggested Connections Start -->
+                    <div class="wow slideInUp" data-wow-delay="0.1s">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h3 class="mb-0">Suggested Connections</h3>
+                        </div>
+                        <div class="suggestions">
+                            <div class="suggestion d-flex justify-content-between p-2 bg-white shadow mb-3 " style="border-radius: 10px;">
+                                <div class="suggestion-profile d-flex">
+                                    <img src="img/testimonial-2.jpg" alt="Profile Image" class="img-fluid rounded-circle"
+                                        width="50px">
+                                    <div class="suggestion-info ms-3">
+                                        <h6 class="m-0">John Doe</h6>
+                                        <small>Software Developer</small>
+                                    </div>
+                                </div>
+                                <div class="suggestion-action">
+                                    <button type="button" class="btn btn-outline-danger rounded-pill px-4">Connect</button>
+                                </div>
+                            </div>
+                            <div class="suggestion d-flex justify-content-between p-2 bg-white shadow mb-3">
+                                <div class="suggestion-profile d-flex">
+                                    <img src="img/testimonial-1.jpg" alt="Profile Image" class="img-fluid rounded-circle"
+                                        width="50px">
+                                    <div class="suggestion-info ms-3">
+                                        <h6 class="m-0">Jane Smith</h6>
+                                        <small>Data Scientist</small>
+                                    </div>
+                                </div>
+                                <div class="suggestion-action">
+                                    <button type="button" class="btn btn-outline-danger rounded-pill px-4">Connect</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Suggested Connections End -->
+
+                    <!-- Ads Start -->
+                    <div class="wow slideInUp mt-4" data-wow-delay="0.1s">
+                        <div class="section-title section-title-sm position-relative pb-3 mb-4">
+                            <h3 class="mb-0">Advertisements</h3>
+                        </div>
+                        <div class="ads bg-white shadow p-3">
+                            <div class="ad mb-3">
+                                <img src="img/ad-1.jpg" alt="Advertisement" class="img-fluid rounded">
+                            </div>
+                            <div class="ad">
+                                <img src="img/ad-2.jpg" alt="Advertisement" class="img-fluid rounded">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ads End -->
+                </div>
+                <!-- Sidebar Right End -->
+                 
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Section End  -->
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row gx-5">
-                <div class="col-lg-4 col-md-6 footer-about">
-                    <div class="d-flex flex-column align-items-center text-center p-4 mt-5">
-                        <a href="index.html" class="navbar-brand">
-                            <h1 class="m-0 text-white">JobHive</h1>
-                        </a>
-                        <div class="d-flex mt-4">
-                            <a class="btn btn-danger btn-square me-2" href="#"><i
-                                    class="fab fa-twitter fw-normal"></i></a>
-                            <a class="btn btn-danger btn-square me-2" href="#"><i
-                                    class="fab fa-facebook-f fw-normal"></i></a>
-                            <a class="btn btn-danger btn-square me-2" href="#"><i
-                                    class="fab fa-linkedin-in fw-normal"></i></a>
-                            <a class="btn btn-danger btn-square" href="#"><i class="fab fa-instagram fw-normal"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-8 col-md-6">
-                    <div class="row gx-5">
-                        <div class="col-lg-4 col-md-12 pt-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Get In Touch</h3>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-geo-alt text-danger me-2"></i>
-                                <p class="mb-0">Bangalore, Karnataka, India</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-envelope-open text-danger me-2"></i>
-                                <p class="mb-0">jobhive@gmail.com</p>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <i class="bi bi-telephone text-danger me-2"></i>
-                                <p class="mb-0">+91 86830 45908</p>
-                            </div>
-
-                        </div>
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">General</h3>
-                            </div>
-                            <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-danger me-2"></i>Home</a>
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-danger me-2"></i>About Us</a>
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-danger me-2"></i>Careers</a>
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-danger me-2"></i>Latest Blog</a>
-                                <a class="text-light" href="#"><i class="bi bi-arrow-right text-danger me-2"></i>Contact
-                                    Us</a>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
-                            <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">Support</h3>
-                            </div>
-                            <div class="link-animated d-flex flex-column justify-content-start">
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-danger me-2"></i>Help Center</a>
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-danger me-2"></i>FAQs</a>
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-danger me-2"></i>Privacy Policy</a>
-                                <a class="text-light mb-2" href="#"><i
-                                        class="bi bi-arrow-right text-danger me-2"></i>Terms of Service</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid text-white" style="background: #061429;">
+    <div class="container-fluid text-secondary-subtle">
         <div class="container text-center">
-            <div class="row justify-content-end">
-                <div class="col-lg-8 col-md-6">
+            <div class="row">
+                <div class="col-lg-12 col-md-6">
                     <div class="d-flex align-items-center justify-content-center" style="height: 75px;">
-                        <p class="mb-0">&copy; <a class="text-white border-bottom" href="index.html">JobHive</a>. All
-                            Rights Reserved.
+                        <p class="mb-0">&copy; 2024 <a class="text-dark" href="index.html">JobHive</a> |
+                            All
+                            Rights Reserved |
                             Designed by <a class="text-danger" href="">Tech Buddies</a>
                         </p>
                     </div>
